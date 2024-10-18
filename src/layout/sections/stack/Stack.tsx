@@ -10,7 +10,7 @@ export const Stack = () => {
         <StyledStack>
             <SectionTitle>My Tech Stack</SectionTitle>
             <SectionText> Technologies I’ve been working with recently</SectionText>
-            <FlexWrapper align={'center'} justify={'space-around'}>
+            <FlexWrapper align={'center'} justify={'space-between'} wrap={'wrap'}>
                 <Icon iconId={'html'} width={120} height={120} viewBox='0 0 120 120' />
                 <Icon iconId={'css'}width={120} height={120} viewBox='0 0 120 120' />
                 <Icon iconId={'js'} width={120} height={120} viewBox='0 0 120 120'/>
