@@ -6,7 +6,7 @@ import styled from 'styled-components';
 export const Contact = () => {
     return (
         <StyledContact>
-            <FlexWrapper>
+            <FlexWrapper direction={'column'} align={'center'}>
                 <SectionTitle>For any questions please mail me:</SectionTitle>
                 <Link href="mailto:vitalikdoiniak@gmail.com">vitalikdoiniak@gmail.com</Link>
             </FlexWrapper>
