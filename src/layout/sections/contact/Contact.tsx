@@ -2,6 +2,7 @@ import React from 'react';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { SectionTitle } from '../../../components/SectionTitle';
 import styled from 'styled-components';
+import { theme } from '../../../styles/Theme';
 
 export const Contact = () => {
     return (
@@ -20,7 +21,7 @@ const StyledContact = styled.section`
     
 `
 const Link = styled.a`
-    background: linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%);
+    background: ${theme.colors.accent};
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

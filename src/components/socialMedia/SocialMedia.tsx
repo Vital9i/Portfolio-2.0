@@ -28,6 +28,7 @@ export const SocialMedia = () => {
 const StyledSocialMedia = styled.ul`
     list-style-type: none;
     display: flex;
+    margin-top: 35px;
 
 `
 

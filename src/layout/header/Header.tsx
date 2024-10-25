@@ -4,21 +4,30 @@ import { Logo } from '../../components/logo/Logo';
 import { Menu } from '../../components/menu/Menu';
 import { SocialMedia } from '../../components/socialMedia/SocialMedia';
 import { FlexWrapper } from '../../components/FlexWrapper';
+import { Container } from '../../components/Container';
 
 export const Header = () => {
     return (
-                    <StyledHeader>
+        <StyledHeader>
+            <Container>
+                <FlexWrapper justify='space-between' align='center'>
                 <Logo />
                 <Menu />
                 <SocialMedia />
-            </StyledHeader>
-       
+                </FlexWrapper>
+            </Container>
+        </StyledHeader>
+
     );
 };
 
 const StyledHeader = styled.header`
-    background-color:#191919;
-    display: flex;
-    justify-content: space-between;
+    padding: 20px 0;
+    position: sticky;
+    top:0;
+    left:0;
+    right: 0;
+    z-index: 999999999;
+  
 `
 

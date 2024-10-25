@@ -32,7 +32,7 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-background-color:#191919;
+
 `
 
 const StyledSpan = styled.span`
@@ -40,6 +40,6 @@ const StyledSpan = styled.span`
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-  
+
 `
 
