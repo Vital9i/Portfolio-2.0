@@ -4,12 +4,15 @@ import { Logo } from '../../components/logo/Logo';
 import { FlexWrapper } from '../../components/FlexWrapper';
 import { SocialMedia } from '../../components/socialMedia/SocialMedia';
 import { Menu } from '../../components/menu/Menu';
+import { theme } from '../../styles/Theme';
+import { Container } from '../../components/Container';
 
 export const Footer = () => {
     return (
         <StyledFooter>
+            <Container>
             <FlexWrapper direction='column'>
-                <div>
+                <FirstBlock>
                     <FlexWrapper justify='space-between' >
                     <Logo />
                     <FlexWrapper justify='flex-end'>
@@ -18,14 +21,16 @@ export const Footer = () => {
                         <SocialMedia />
                     </FlexWrapper>
                     </FlexWrapper>
-                </div>
-                <div>
+                </FirstBlock>
+
+                <SecondBlock>
                     <FlexWrapper justify='space-between'>
                     <Menu />
                     <p>Designed and built by <StyledSpan>Vitali Doiniak</StyledSpan> with <StyledSpan>Love</StyledSpan> & <StyledSpan>Coffee</StyledSpan></p>
                     </FlexWrapper>
-                </div>
+                </SecondBlock>
             </FlexWrapper>
+            </Container>
         </StyledFooter>
 
     );
@@ -36,10 +41,31 @@ const StyledFooter = styled.footer`
 `
 
 const StyledSpan = styled.span`
-    background: linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%);
+    background: ${theme.colors.accent};
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 
 `
+const FirstBlock = styled.div`
+    position: relative;
+    margin-bottom: 110px;
 
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 1170px;
+        height: 6px;
+        background-color: #42446E;
+
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        /* border: 2px solid #42446E; */
+        bottom:-30px;
+        opacity: 30%;
+    }
+`
+const SecondBlock = styled.div`
+    
+`

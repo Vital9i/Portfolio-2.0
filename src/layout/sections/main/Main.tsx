@@ -29,29 +29,34 @@ min-height: 100vh;
 color: ${theme.colors.accent};
 display: flex;
 `
-
 const StyledPhoto = styled.img`
-width: 349px;
-height: 349px;
-border-radius: 230px;
-opacity: 0px;
-object-fit: cover;
-`
+  background-image: ${theme.colors.accent};
+  padding: 9px;
+  width: 21.75rem;
+  height: 21.75rem;
+  border-radius: 50%;
+  object-fit: cover;
+  `
+
 const MainTitle = styled.h1`
 font-size: 58px;
 font-weight: 700;
 line-height: 70px;
 letter-spacing: -1px;
 text-align: left;
-
+color: ${theme.colors.mainFont};
 `
-const Name = styled.h2`
+const Name = styled.span`
 font-size: 58px;
 font-weight: 700;
 line-height: 70px;
 letter-spacing: -1px;
 text-align: left;
-color: ${theme.colors.accent};
+background: ${theme.colors.accent};
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-decoration: none;
 
 `
 const Text = styled.p`
@@ -60,5 +65,5 @@ font-weight: 700;
 line-height: 70px;
 letter-spacing: -1px;
 text-align: left;
-color: ${theme.colors.accent};
+color: ${theme.colors.mainFont};
 `
