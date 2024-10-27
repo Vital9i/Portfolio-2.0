@@ -10,13 +10,15 @@ import project3 from '../../../assets/images/proj-3.webp';
 import project4 from '../../../assets/images/proj-4.webp';
 import project5 from '../../../assets/images/proj-5_1.webp';
 import project6 from '../../../assets/images/proj-6_1.webp';
+import { Container } from '../../../components/Container';
 
 export const Projects = () => {
     return (
         <StyledProjects>
+            <Container>
             <SectionTitle>Projects</SectionTitle>
             <SectionText>Things I’ve built so far</SectionText>
-            <FlexWrapper justify={'space-around'}>
+            <FlexWrapper justify={'space-around'} wrap='wrap'>
                 <Project src={project1}
                     title={'Project Tile goes here'}
                     text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
@@ -42,6 +44,7 @@ export const Projects = () => {
                     text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} 
                     stackText={'Tech stack : HTML , JavaScript, SASS, React'}/>
             </FlexWrapper>
+            </Container>
         </StyledProjects>
 
     );
