@@ -5,6 +5,7 @@ import { Menu } from '../../components/menu/Menu';
 import { SocialMedia } from '../../components/socialMedia/SocialMedia';
 import { FlexWrapper } from '../../components/FlexWrapper';
 import { Container } from '../../components/Container';
+import { theme } from '../../styles/Theme';
 
 export const Header = () => {
     return (
@@ -28,6 +29,11 @@ const StyledHeader = styled.header`
     left:0;
     right: 0;
     z-index: 999999999;
+
+    @media ${theme.media.tablet} {
+    display: none;
+}
+
   
 `
 

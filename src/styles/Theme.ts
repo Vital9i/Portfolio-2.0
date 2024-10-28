@@ -9,5 +9,10 @@ export const theme = {
         mainFont:'#D9D9D9',
         primaryFont: '#CCCCCC',
         secondaryFont: '#A7A7A7',
+    },
+
+    media:{
+        tablet:'screen and (max-width: 768px)',
+        mobite:'screen and (max-width: 576px)',
     }
 }
