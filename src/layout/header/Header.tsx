@@ -11,7 +11,7 @@ export const Header = () => {
         <StyledHeader>
             <Container>
                 <FlexWrapper justify='space-between' align='center'>
-                <Logo />
+                <Logo idLogo='logo'/>
                 <Menu />
                 <SocialMedia />
                 </FlexWrapper>
@@ -22,7 +22,7 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-    padding: 20px 0;
+    padding-top:20px;
     position: sticky;
     top:0;
     left:0;
@@ -30,4 +30,5 @@ const StyledHeader = styled.header`
     z-index: 999999999;
   
 `
+
 

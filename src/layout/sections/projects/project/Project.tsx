@@ -52,10 +52,11 @@ position: relative;
     max-width: 373px;
     width: 100%;
     border-radius: 20px !important;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     margin: 2px;
     overflow: hidden;
     color:${theme.colors.primaryFont};
+    margin-bottom: 35px;
 `
 const Image = styled.img`
     width: 100%;

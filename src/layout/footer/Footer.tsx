@@ -14,12 +14,12 @@ export const Footer = () => {
             <FlexWrapper direction='column'>
                 <FirstBlock>
                     <FlexWrapper justify='space-between' >
-                    <Logo />
-                    <FlexWrapper justify='flex-end'>
-                        <span>+1 555 505 5050</span>
-                        <span>vitalikdoiniak@gmail.com</span>
+                    <Logo idLogo='footerLogo'/>
+                    <FlexWrapper justify='space-between' >
+                        <Phone>+1 555 505 5050</Phone>
+                        <Mail>vitalikdoiniak@gmail.com</Mail>
                         <SocialMedia />
-                    </FlexWrapper>
+                        </FlexWrapper>
                     </FlexWrapper>
                 </FirstBlock>
 
@@ -40,6 +40,21 @@ const StyledFooter = styled.footer`
 
 `
 
+const Phone = styled.div`
+font-family: DM Sans;
+font-size: 18px;
+font-weight: 400;
+color:${theme.colors.secondaryFont};
+padding-right: 30px;
+`
+const Mail = styled.div`
+font-family: DM Sans;
+font-size: 18px;
+font-weight: 400;
+color:${theme.colors.secondaryFont};
+padding-right: 48px;
+`
+
 const StyledSpan = styled.span`
     background: ${theme.colors.accent};
     -webkit-background-clip: text;
@@ -50,6 +65,7 @@ const StyledSpan = styled.span`
 const FirstBlock = styled.div`
     position: relative;
     margin-bottom: 110px;
+    margin-top: 70px;
 
     &::before {
         content: '';
@@ -67,5 +83,9 @@ const FirstBlock = styled.div`
     }
 `
 const SecondBlock = styled.div`
-    
+    margin-bottom: 60px;
+
+    p {
+    color:${theme.colors.secondaryFont}
+}
 `

@@ -3,22 +3,25 @@ import { FlexWrapper } from '../../../components/FlexWrapper';
 import { SectionTitle } from '../../../components/SectionTitle';
 import styled from 'styled-components';
 import { theme } from '../../../styles/Theme';
+import { Container } from '../../../components/Container';
 
 export const Contact = () => {
     return (
         <StyledContact>
-            <FlexWrapper direction={'column'} align={'center'}>
-                <SectionTitle>For any questions please mail me:</SectionTitle>
-                <Link href="mailto:vitalikdoiniak@gmail.com">vitalikdoiniak@gmail.com</Link>
-            </FlexWrapper>
+            <Container>
+                <FlexWrapper direction={'column'} align={'center'}>
+                    <SectionTitle>For any questions please mail me:</SectionTitle>
+                    <LinkWrapper>
+                    <Link href="mailto:vitalikdoiniak@gmail.com">vitalikdoiniak@gmail.com</Link>
+                    </LinkWrapper>
+                </FlexWrapper>
+            </Container>
         </StyledContact>
     );
 };
 
 const StyledContact = styled.section`
-    min-height:100vh;
-    background-color: #191919;
-    
+      
 `
 const Link = styled.a`
     background: ${theme.colors.accent};
@@ -27,3 +30,12 @@ const Link = styled.a`
     color: transparent;
     text-decoration: none;
 ` 
+const LinkWrapper = styled.div`
+margin-top: -30px;
+margin-bottom: 200px;
+font-family: DM Sans;
+font-size: 58px;
+font-weight: 700;
+letter-spacing: -1px;
+text-align: center;
+`

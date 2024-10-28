@@ -7,6 +7,6 @@ font-size: 48px;
 font-weight: 700;
 text-align: center;
 color: ${theme.colors.primaryFont};
-padding-top: 100px;
+padding-top: 190px;
 padding-bottom:50px;
 `

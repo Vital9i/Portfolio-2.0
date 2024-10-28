@@ -23,10 +23,12 @@ export const Projects = () => {
                     title={'Project Tile goes here'}
                     text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
                     stackText={'Tech stack : HTML , JavaScript, SASS, React'} />
+                    <ProjectWrapper>
                 <Project src={project2}
                     title={'Project Tile goes here'}
                     text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} 
                     stackText={'Tech stack : HTML , JavaScript, SASS, React'}/>
+                    </ProjectWrapper>
                 <Project src={project3}
                     title={'Project Tile goes here'}
                     text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} 
@@ -35,10 +37,12 @@ export const Projects = () => {
                     title={'Project Tile goes here'}
                     text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} 
                     stackText={'Tech stack : HTML , JavaScript, SASS, React'}/>
+                    <ProjectWrapper>
                 <Project src={project5}
                     title={'Project Tile goes here'}
                     text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} 
                     stackText={'Tech stack : HTML , JavaScript, SASS, React'}/>
+                    </ProjectWrapper>
                 <Project src={project6}
                     title={'Project Tile goes here'}
                     text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} 
@@ -51,7 +55,10 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
-    /* min-height:100vh; */
-    background-color: #191919;
+       
     
+`
+
+const ProjectWrapper = styled.div`
+    margin: 0 1px;
 `
