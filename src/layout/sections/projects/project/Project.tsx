@@ -15,20 +15,29 @@ export const Project = (props: ProjectPropsType) => {
     return (
         <StyledProject>
             <FlexWrapper direction='column'>
-            <Image src={props.src} alt='' />
-            <Title>{props.title}</Title>
-            <Text>{props.text}</Text>
-            <StackText>{props.stackText}</StackText>
-            {/* <FlexWrapper align={'center'} justify={'space-between'}> */}
-                <StyledPreview>
-                    <Icon iconId={'akar'} />
-                    <Link href={'#'}>Live Preview</Link>
-                </StyledPreview>
-                <StyledCode>
-                    <Icon iconId={'git'} />
-                    <Link href={'#'}>View Code</Link>
-                </StyledCode>
-            {/* </FlexWrapper> */}
+                <Image src={props.src} alt='' />
+
+                <Description>
+                    <Title>{props.title}</Title>
+                    <Text>{props.text}</Text>
+                    <StackText>{props.stackText}</StackText>
+                    
+                    <FlexWrapper justify='space-between'>
+                    <StyledPreview>
+                        <FlexWrapper direction='row' >
+                        <Icon iconId={'akar'} />
+                        <Link href={'#'}>Live Preview</Link>
+                        </FlexWrapper>
+                    </StyledPreview>
+
+                    <StyledCode>
+                    <FlexWrapper direction='row'>
+                        <Icon iconId={'git'} />
+                        <Link href={'#'}>View Code</Link>
+                        </FlexWrapper>
+                    </StyledCode>
+                    </FlexWrapper>
+                </Description>
 
             </FlexWrapper>
         </StyledProject>
@@ -37,40 +46,61 @@ export const Project = (props: ProjectPropsType) => {
 };
 
 const StyledProject = styled.div`
+position: relative;
     max-width: 373px;
-    max-height: 567px;
     width: 100%;
-    border-radius: 20px;
+    border-radius: 20px !important;
     border: 1px solid green;
     margin: 2px;
-    
+    overflow: hidden;
+    color:${theme.colors.primaryFont};
 `
 const Image = styled.img`
     width: 100%;
     height:260px;
     object-fit: cover;
-    
-`
-const Title = styled.h3`
-    color: white;
+        `
+const Description = styled.div`
+    padding: 25px 30px;
     background-color: ${theme.colors.BgProject};
-`
-const Text = styled.p`
-    color: white;
-    background-color: ${theme.colors.BgProject};
-`
-const Link = styled.a`
-    color: white;
-    background-color: ${theme.colors.BgProject};
-`
-const StackText = styled.p`
-color: white;
-background-color: ${theme.colors.BgProject};
 `
 
-const StyledPreview = styled.div`
-   background-color: ${theme.colors.BgProject};
+const Title = styled.h3`
+/* font-family: Poppins;
+font-size: 28px;
+font-weight: 500px;
+text-align: center; */
+font-family: Poppins;
+font-size: 28px;
+font-weight: 500;
+line-height: 26px;
+text-align: left;
+
+
 `
-const StyledCode= styled.div`
-   background-color: ${theme.colors.BgProject};
+const Text = styled.p`
+font-size: 18px;
+font-weight: 300;
+line-height: 26px;
+text-align: left;
+padding-top: 17px;
+padding-bottom: 12px;
+
+`
+const Link = styled.a`
+color: #FFFFFF;
+
+`
+const StackText = styled.p`
+font-size: 16px;
+font-weight: 400;
+text-align: left;
+
+`
+const StyledPreview = styled.div`
+padding-top: 21px;
+`
+const StyledCode = styled.div`
+padding-top: 21px;
+
 `
