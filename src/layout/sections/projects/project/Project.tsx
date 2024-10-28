@@ -21,21 +21,21 @@ export const Project = (props: ProjectPropsType) => {
                     <Title>{props.title}</Title>
                     <Text>{props.text}</Text>
                     <StackText>{props.stackText}</StackText>
-                    
-                    <FlexWrapper justify='space-between'>
-                    <StyledPreview>
-                        <FlexWrapper direction='row' >
-                        <Icon iconId={'akar'} />
-                        <Link href={'#'}>Live Preview</Link>
-                        </FlexWrapper>
-                    </StyledPreview>
 
-                    <StyledCode>
-                    <FlexWrapper direction='row'>
-                        <Icon iconId={'git'} />
-                        <Link href={'#'}>View Code</Link>
-                        </FlexWrapper>
-                    </StyledCode>
+                    <FlexWrapper justify='space-between'>
+                        <StyledPreview>
+                            <FlexWrapper direction='row' >
+                                <Icon iconId={'akar'} />
+                                <Link href={'#'}>Live Preview</Link>
+                            </FlexWrapper>
+                        </StyledPreview>
+
+                        <StyledCode>
+                            <FlexWrapper direction='row'>
+                                <IconWrapper><Icon iconId={'git'} /></IconWrapper>
+                                <Link href={'#'}>View Code</Link>
+                            </FlexWrapper>
+                        </StyledCode>
                     </FlexWrapper>
                 </Description>
 
@@ -44,6 +44,8 @@ export const Project = (props: ProjectPropsType) => {
 
     );
 };
+
+
 
 const StyledProject = styled.div`
 position: relative;
@@ -61,7 +63,7 @@ const Image = styled.img`
     object-fit: cover;
         `
 const Description = styled.div`
-    padding: 25px 30px;
+    padding: 25px 30px 0;
     background-color: ${theme.colors.BgProject};
 `
 
@@ -89,7 +91,8 @@ padding-bottom: 12px;
 `
 const Link = styled.a`
 color: #FFFFFF;
-
+text-decoration: underline;
+margin-left: 0px;
 `
 const StackText = styled.p`
 font-size: 16px;
@@ -103,4 +106,7 @@ padding-top: 21px;
 const StyledCode = styled.div`
 padding-top: 21px;
 
+`
+const IconWrapper = styled.div`
+margin-top: -10px;
 `
