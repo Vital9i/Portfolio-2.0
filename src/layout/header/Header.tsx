@@ -33,8 +33,6 @@ const StyledHeader = styled.header`
     @media ${theme.media.tablet} {
     display: none;
 }
-
-  
 `
 
 
